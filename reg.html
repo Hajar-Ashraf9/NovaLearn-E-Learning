@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <!--start navBar-->
+    <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="details.html">Course Details</a></li>
+            <li><a href="inst.html">Instructors</a></li>
+            <li><a href="test.html">Testimonials</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="price.html">Pricing</a></li>
+            <li><a href="out.html">Checkout</a></li>
+            <li><a href="conform.html">Confirmation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="reg.html">Register</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+    <!--register form-->
+    <form action="courses.html" method="post">
+        <fieldset>
+            <legend>New Student Account Details</legend>
+            <!--personal info-->
+            <section id="fullname">
+                <label for="name">Full Name</label>
+                <input type="text" placeholder="first name"  id="name" name="firstname" required>
+                <input type="text" id="lname" name="lastname" placeholder="last Name" required>
+            </section>
+            <section id="nums">
+                <label for="num">Phone Number</label>
+                <input type="tel" name="num" id="num" placeholder="Enter your number" required>
+            </section>
+
+            <!--login info-->
+            <section id="email">
+                <label for="em">E-mail</label>
+                <input type="email" id="em" name="email" placeholder="E-mail" required>
+            </section>
+            <section id="password">
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name="password" placeholder="password" required>
+            </section>
+
+            <!--birthday info-->
+            <section id="birthd">
+                <label for="birth">Birthday</label>
+                <input type="date" id="birth" name="birthday">
+            </section>
+            <hr>
+            <!-- Interests & Terms (Checkboxes) -->
+            <section id="check">
+                <p>Interests:</p>
+                <label for="frontend">Frontend Development</label>
+                <input type="checkbox" name="frontend" id="frontend" value="frontend">
+                <label for="backend">Backend Development</label>
+                <input type="checkbox" name="backend" id="backend" value="backend">
+                <label for="cyber">Cyber Security</label>
+                <input type="checkbox" name="cyber" id="cyber" value="cyber">
+            </section>
+            <hr>
+            <!--Select Course-->
+            <section id="selected">
+                <label for="select">select your course</label>
+                <select name="courses" id="select">
+                    <option disabled selected>--select your course--</option>
+                    <option value="Fundamentals">Web Development Fundamentals</option>
+                    <option value="JavaScript">Interactive Web with JavaScript</option>
+                    <option value="React">Modern Frontend with React</option>
+                </select>
+            </section>
+            <hr>
+            <!--Skill Level-->
+            <section id="level">
+                <h4>Current Experience Level</h4>
+                <label for="beginner">Beginner</label>
+                <input type="radio" name="level" id="beginner" required value="beginner">
+                <label for="intermed">Intermediate</label>
+                <input type="radio" name="level" id="intermed" value="Intermediate">
+                <label for="advance">Advanced</label>
+                <input type="radio" name="level" id="advance" value="advanced">
+            </section>
+            <hr>
+            
+            <!--Notes-->
+            <section id="notes">
+            <label for="note">Write your Notes</label>
+            <textarea name="note" id="note" placeholder="Any special requests or questions" cols="70" rows="10"></textarea>
+            </section>
+            <!--button Register-->
+            <section id="reg">
+                <input type="submit" id="regis" name="Register" value="Register Now">
+            </section>
+        </fieldset>    
+    </form>
+    </main>
+    <!--start footer-->
+    <footer id="contact">
+        <h4>Contact Me: hajarashraf905@gmail.com</h4>
+        <div class="linkes">
+            <a href="https://www.linkedin.com/in/hajar-ashraf/" target="_blank">linkedin</a>
+            <a href="https://github.com/Hajar-Ashraf9" target="_blank">github</a>
+            <a href="https://wa.me/201016515759" target="_blank">WhatsApp</a>
+        </div>
+        <!--حقوق الملكية-->
+        <p>&copy; 2026 NovaLearn. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

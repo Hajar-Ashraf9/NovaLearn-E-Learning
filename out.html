@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+<body>
+    <!--start navBar-->
+    <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="details.html">Course Details</a></li>
+            <li><a href="inst.html">Instructors</a></li>
+            <li><a href="test.html">Testimonials</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="price.html">Pricing</a></li>
+            <li><a href="out.html">Checkout</a></li>
+            <li><a href="conform.html">Confirmation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="reg.html">Register</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <section id="info">
+        <h1 class="out">Checkout</h1>
+        <p class="disout">Complete your order by providing your billing and payment details</p>
+        </section>
+
+        <!--start form payment-->
+        <form action="conform.html" method="post">
+            <fieldset>
+                <legend>Payment Details</legend>
+                <!--info-->
+                <section id="info">
+                    <div class="flname">
+                    <label for="fname">FullName</label>
+                    <input type="text" name="fullname" id="fname" placeholder=" Enter your name" required>
+                    </div>
+                    <div class="emails">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+                    </div>    
+                </section>
+                <!--card-->
+                <section id="card">
+                    <div class="cards">
+                        <label for="cardnum">Card Number</label>
+                        <input type="number" name="Cardnumber" id="cardnum" placeholder="Enter your card number" required>
+                    </div>
+                    <div class="expiry">
+                        <label for="expir">Expiry Date</label>
+                        <input type="month" name="expiry" id="expir" placeholder="MM/YY" required>
+                    </div>
+                    <div class="cv">
+                        <label for="cvv">CVV</label>
+                        <input type="text" name="cvv" id="cvv" maxlength="3" placeholder="123" required>
+                    </div>
+                </section>
+                <!--submit-->
+                <section id="submit">
+                    <input type="submit" value="Pay Now" id="sub" name="button">
+                </section>
+            </fieldset>
+        </form>
+        <!--start table Summary-->
+        <table border="1">
+            <!--head of table-->
+            <thead>
+                <tr>
+                <th>Course / Plan</th>
+                <th>Price</th>
+                </tr>
+            </thead>
+            <!--body of table-->
+            <tbody>
+                <tr>
+                    <td>Pro Plan - Annual Access</td>
+                    <td>$59 / month</td>
+                </tr>
+            </tbody>
+            <!--footer of table-->
+            <tfoot>
+            <tr>
+                <td><strong>Total Price</strong></td>
+                <td><strong>$708</strong></td>
+            </tr>
+        </tfoot>
+        </table>
+    </main>
+
+    <!--start footer-->
+    <footer id="contact">
+        <h4>Contact Me: hajarashraf905@gmail.com</h4>
+        <div class="linkes">
+            <a href="https://www.linkedin.com/in/hajar-ashraf/" target="_blank">linkedin</a>
+            <a href="https://github.com/Hajar-Ashraf9" target="_blank">github</a>
+            <a href="https://wa.me/201016515759" target="_blank">WhatsApp</a>
+        </div>
+        <!--حقوق الملكية-->
+        <p>&copy; 2026 NovaLearn. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
