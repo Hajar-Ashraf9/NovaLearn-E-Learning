@@ -3,73 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts (Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">    
+<!--library cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--style-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="inst.css">
     <title>Instructors</title>
 </head>
-<body>
+<body class="light inst-page">
     <!--start navBar-->
     <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="details.html">Course Details</a></li>
-            <li><a href="inst.html">Instructors</a></li>
-            <li><a href="test.html">Testimonials</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="price.html">Pricing</a></li>
-            <li><a href="out.html">Checkout</a></li>
-            <li><a href="conform.html">Confirmation</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="reg.html">Register</a></li>
-        </ul>
+    <nav class="navbar">
+        <!-- 1. اللوجو والروابط على اليسار -->
+        <div class="nav-left">
+            <h1 class="logo">Nova<span>Learn</span></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="inst.html">Instructors</a></li>
+                <li><a href="price.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- 2. مربع البحث في المنتصف -->
+        <div class="nav-center">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search Courses..." id="search">
+            </div>
+        </div>
+
+        <!-- 3. الأيقونات الثلاث على اليمين -->
+        <div class="nav-right">
+            <!-- أيقونة المستخدم -->
+            <a href="reg.html" class="icon-btn" aria-label="User Account">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <!-- أيقونة السلة -->
+            <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+
+            <!-- أيقونة القمر للمود -->
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
     </nav>
-    </header>
+</header>
     <!--start main-->
     <main>
-        <h1 class="instra">Our Instructors</h1>
-        <!--instractor 1-->
-        <section id="inst1">
-            <img src="img/4.png" alt="Eng.Ahmed Hassan">
-            <h2 class="name">Eng. Ahmed Hassan</h2>
-            <p class="title"><strong>Title:</strong> Senior Front-End Developer</p>
-            <p class="bioin"><strong>Bio:</strong> Experienced Web Developer with over 8 years of teaching HTML, CSS, and JavaScript 
-                <br> Passionate about helping students build modern websites.</p>
-            <p class="core"><strong>Courses:</strong></p>
-            <ul>
-                <li> HTML & CSS Basics</li>
-                <li>Advanced JavaScript</li>
-                <li>Responsive Web Design</li>
-            </ul>
-        </section>
-        <!--instractor 2-->
-        <section id="inst2">
-            <img src="img/5.png" alt="Eng.Omar Ali">
-            <h2 class="name">Eng. Omar Ali</h2>
-            <p class="title"><strong>Title:</strong> Full-Stack Web Developer</p>
-            <p class="bioin"><strong>Bio:</strong> Software engineer specializing in web application structure and clean architecture.
-                <br> Focused on practical and real-world projects.</p>
-            <p class="core"><strong>Courses:</strong></p>
-            <ul>
-                <li>Introduction to Web Development</li>
-                <li>Semantic HTML5 Deep Dive</li>
-            </ul>
-        </section>
-        
-        <!--instractor 3-->
-        <section id="inst3">
-            <img src="img/6.png" alt="Eng.Sarah Omar">
-            <h2 class="name">Eng. Sarah Omar</h2>
-            <p class="title"><strong>Title:</strong> Lead UI/UX Designer & Web Engineer</p>
-            <p class="bioin"><strong>Bio:</strong> Specialist in user interface design and web performance.
-                <br> She has trained more than 5,000 students in front-end development.</p>
-            <p class="core"><strong>Courses:</strong></p>
-            <ul>
-                <li> Web Design Principles</li>
-                <li>CSS Grid & Flexbox Masterclass</li>
-            </ul>
-        </section>
+        <h1 class="instra">Our <span class="gradient-text">Instructors</span></h1>
+
+        <div class="inst-grid">
+            <!--instractor 1-->
+            <section id="inst1" class="inst-card">
+                <img src="img/4.png" alt="Eng.Ahmed Hassan">
+                <h2 class="name">Eng. Ahmed Hassan</h2>
+                <p class="title"><strong>Title:</strong> Senior Front-End Developer</p>
+                <p class="bioin"><strong>Bio:</strong> Experienced Web Developer with over 8 years of teaching HTML, CSS, and JavaScript
+                    Passionate about helping students build modern websites.</p>
+                <p class="core"><strong>Courses:</strong></p>
+                <ul>
+                    <li>HTML & CSS Basics</li>
+                    <li>Advanced JavaScript</li>
+                    <li>Responsive Web Design</li>
+                </ul>
+            </section>
+            <!--instractor 2-->
+            <section id="inst2" class="inst-card">
+                <img src="img/5.png" alt="Eng.Omar Ali">
+                <h2 class="name">Eng. Omar Ali</h2>
+                <p class="title"><strong>Title:</strong> Full-Stack Web Developer</p>
+                <p class="bioin"><strong>Bio:</strong> Software engineer specializing in web application structure and clean architecture.
+                    Focused on practical and real-world projects.</p>
+                <p class="core"><strong>Courses:</strong></p>
+                <ul>
+                    <li>Introduction to Web Development</li>
+                    <li>Semantic HTML5 Deep Dive</li>
+                </ul>
+            </section>
+
+            <!--instractor 3-->
+            <section id="inst3" class="inst-card">
+                <img src="img/6.png" alt="Eng.Sarah Omar">
+                <h2 class="name">Eng. Sarah Omar</h2>
+                <p class="title"><strong>Title:</strong> Lead UI/UX Designer & Web Engineer</p>
+                <p class="bioin"><strong>Bio:</strong> Specialist in user interface design and web performance.
+                    She has trained more than 5,000 students in front-end development.</p>
+                <p class="core"><strong>Courses:</strong></p>
+                <ul>
+                    <li>Web Design Principles</li>
+                    <li>CSS Grid & Flexbox Masterclass</li>
+                </ul>
+            </section>
+        </div>
+
         <!--button-->
         <section class="button">
             <div>
@@ -79,6 +115,16 @@
             <a href="courses.html">Go to Courses page</a>
             </div>
         </section>
+        <!--start testimonials teaser-->
+<section id="test-teaser">
+    <div class="test-teaser-head">
+        <h3>What Our <span class="gradient-text">Students Say</span></h3>
+        <a href="test.html" class="btn-secondary">
+            Read All Testimonials <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+   
+</section>
     </main>
     <!--start footer-->
     <footer id="contact">
@@ -91,5 +137,8 @@
         <!--حقوق الملكية-->
         <p>&copy; 2026 NovaLearn. All Rights Reserved.</p>
     </footer>
+
+        <script src="main.js"></script>
+
 </body>
 </html>

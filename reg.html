@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts (Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">    
+<!--library cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--style-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reg.css">
     <title>Register</title>
 </head>
-<body>
-    <!--start navBar-->
-    <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="details.html">Course Details</a></li>
-            <li><a href="inst.html">Instructors</a></li>
-            <li><a href="test.html">Testimonials</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="price.html">Pricing</a></li>
-            <li><a href="out.html">Checkout</a></li>
-            <li><a href="conform.html">Confirmation</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="reg.html">Register</a></li>
-        </ul>
-    </nav>
-    </header>
+<body class="light  reg-page">
+    <div class="auth-topbar">
+        <a href="index.html" class="logo">Nova<span>Learn</span></a>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </div>
     <main>
+        <!-- Hero / intro column -->
+        <div class="reg-hero">
+            <div class="hero-badge">
+                <span class="badge-icon">🎓</span>
+                <span>Start Your Journey</span>
+            </div>
+            <h2 class="reg-title">
+                Create Your <span class="gradient-text">Student Account</span>
+            </h2>
+            <p class="reg-subtitle">
+                Join NovaLearn today and get instant access to hands-on courses, expert instructors, and a growing community of learners.
+            </p>
+            <ul class="reg-perks">
+                <li><i class="fa-solid fa-check"></i> Access to 50+ expert courses</li>
+                <li><i class="fa-solid fa-check"></i> Learn at your own pace</li>
+                <li><i class="fa-solid fa-check"></i> Certificate on completion</li>
+            </ul>
+        </div>
+
     <!--register form-->
     <form action="courses.html" method="post">
         <fieldset>
@@ -37,36 +51,41 @@
                 <input type="text" placeholder="first name"  id="name" name="firstname" required>
                 <input type="text" id="lname" name="lastname" placeholder="last Name" required>
             </section>
-            <section id="nums">
-                <label for="num">Phone Number</label>
-                <input type="tel" name="num" id="num" placeholder="Enter your number" required>
-            </section>
 
-            <!--login info-->
-            <section id="email">
-                <label for="em">E-mail</label>
-                <input type="email" id="em" name="email" placeholder="E-mail" required>
-            </section>
-            <section id="password">
-                <label for="pass">Password</label>
-                <input type="password" id="pass" name="password" placeholder="password" required>
-            </section>
+            <div class="grid-2">
+                <section id="nums">
+                    <label for="num">Phone Number</label>
+                    <input type="tel" name="num" id="num" placeholder="Enter your number" required>
+                </section>
+                <section id="email">
+                    <label for="em">E-mail</label>
+                    <input type="email" id="em" name="email" placeholder="E-mail" required>
+                </section>
+            </div>
 
-            <!--birthday info-->
-            <section id="birthd">
-                <label for="birth">Birthday</label>
-                <input type="date" id="birth" name="birthday">
-            </section>
+            <div class="grid-2">
+                <section id="password">
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" name="password" placeholder="password" required>
+                </section>
+                <section id="birthd">
+                    <label for="birth">Birthday</label>
+                    <input type="date" id="birth" name="birthday">
+                </section>
+            </div>
+
             <hr>
             <!-- Interests & Terms (Checkboxes) -->
             <section id="check">
                 <p>Interests:</p>
-                <label for="frontend">Frontend Development</label>
-                <input type="checkbox" name="frontend" id="frontend" value="frontend">
-                <label for="backend">Backend Development</label>
-                <input type="checkbox" name="backend" id="backend" value="backend">
-                <label for="cyber">Cyber Security</label>
-                <input type="checkbox" name="cyber" id="cyber" value="cyber">
+                <div class="chip-group">
+                    <input type="checkbox" name="frontend" id="frontend" value="frontend">
+                    <label for="frontend">Frontend Development</label>
+                    <input type="checkbox" name="backend" id="backend" value="backend">
+                    <label for="backend">Backend Development</label>
+                    <input type="checkbox" name="cyber" id="cyber" value="cyber">
+                    <label for="cyber">Cyber Security</label>
+                </div>
             </section>
             <hr>
             <!--Select Course-->
@@ -83,15 +102,17 @@
             <!--Skill Level-->
             <section id="level">
                 <h4>Current Experience Level</h4>
-                <label for="beginner">Beginner</label>
-                <input type="radio" name="level" id="beginner" required value="beginner">
-                <label for="intermed">Intermediate</label>
-                <input type="radio" name="level" id="intermed" value="Intermediate">
-                <label for="advance">Advanced</label>
-                <input type="radio" name="level" id="advance" value="advanced">
+                <div class="chip-group">
+                    <input type="radio" name="level" id="beginner" required value="beginner">
+                    <label for="beginner">Beginner</label>
+                    <input type="radio" name="level" id="intermed" value="Intermediate">
+                    <label for="intermed">Intermediate</label>
+                    <input type="radio" name="level" id="advance" value="advanced">
+                    <label for="advance">Advanced</label>
+                </div>
             </section>
             <hr>
-            
+
             <!--Notes-->
             <section id="notes">
             <label for="note">Write your Notes</label>
@@ -115,5 +136,7 @@
         <!--حقوق الملكية-->
         <p>&copy; 2026 NovaLearn. All Rights Reserved.</p>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

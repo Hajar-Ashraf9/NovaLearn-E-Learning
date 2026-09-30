@@ -3,32 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <!--library cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--style-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="confirm.css">
     <title>Confirmation</title>
 </head>
-<body>
+<body class="light confirm-page">
     <!--start navBar-->
     <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="details.html">Course Details</a></li>
-            <li><a href="inst.html">Instructors</a></li>
-            <li><a href="test.html">Testimonials</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="price.html">Pricing</a></li>
-            <li><a href="out.html">Checkout</a></li>
-            <li><a href="conform.html">Confirmation</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="reg.html">Register</a></li>
-        </ul>
+    <nav class="navbar">
+        <!-- 1. اللوجو والروابط على اليسار -->
+        <div class="nav-left">
+            <h1 class="logo">Nova<span>Learn</span></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="inst.html">Instructors</a></li>
+                <li><a href="price.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- 2. مربع البحث في المنتصف -->
+        <div class="nav-center">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search Courses..." id="search">
+            </div>
+        </div>
+
+        <!-- 3. الأيقونات الثلاث على اليمين -->
+        <div class="nav-right">
+            <!-- أيقونة المستخدم -->
+            <a href="reg.html" class="icon-btn" aria-label="User Account">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <!-- أيقونة السلة -->
+            <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+
+            <!-- أيقونة القمر للمود -->
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
     </nav>
-    </header>
+</header>
 
     <main>
         <section id="head">
+            <div class="confirm-icon"><i class="fa-solid fa-check"></i></div>
             <h1>Order Confirmation</h1>
             <h2>Thank you for your purchase! Your order has been placed successfully</h2>
         </section>
@@ -42,12 +75,12 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Pro Plan - Annual Access</td>
-                    <td>$59 / month</td>
+                    <td id="planNam"></td>
+                    <td id="Pric"></td>
                 </tr>
                 <tr>
                 <td>Order ID</td>
-                <td>#ORD-2026-8942</td>
+                <td id="order">#ORD-2026-8942</td>
             </tr>
             <tr>
                 <td>Payment Method</td>
@@ -57,13 +90,13 @@
             <tfoot>
             <tr>
                 <td><strong>Total Price</strong></td>
-                <td><strong>$708</strong></td>
+                <td id="totalPric"><strong></strong></td>
             </tr>
         </tfoot>
         </table>
 
         <!--to home page-->
-        <a href="index.html">Start Learning</a>
+        <a href="index.html" class="btn-primary">Start Learning <i class="fa-solid fa-arrow-right"></i></a>
     </main>
     <!--start footer-->
     <footer id="contact">
@@ -76,5 +109,8 @@
         <!--حقوق الملكية-->
         <p>&copy; 2026 NovaLearn. All Rights Reserved.</p>
     </footer>
+
+        <script src="main.js"></script>
+
 </body>
 </html>

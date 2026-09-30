@@ -3,48 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts (Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">    
+<!--library cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--style-->
+    <link rel="stylesheet" href="style.css">
     <title>NovaLearn</title>
 </head>
-<body>
-    <!--header-->
+<body class="light">
     <header>
-        <!--name of academy-->
-        <h1>NovaLearn</h1>
-        <!--start navBar-->
-        <nav>
-            <ul>
+    <nav class="navbar">
+        <!-- 1. اللوجو والروابط على اليسار -->
+        <div class="nav-left">
+            <h1 class="logo">Nova<span>Learn</span></h1>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="courses.html">Courses</a></li>
-                <li><a href="details.html">Course Details</a></li>
                 <li><a href="inst.html">Instructors</a></li>
-                <li><a href="test.html">Testimonials</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="cart.html">Cart</a></li>
                 <li><a href="price.html">Pricing</a></li>
-                <li><a href="out.html">Checkout</a></li>
-                <li><a href="conform.html">Confirmation</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="reg.html">Register</a></li>
             </ul>
-        </nav>
-        <!--end navbar-->
-    </header>
+        </div>
+
+        <!-- 2. مربع البحث في المنتصف -->
+        <div class="nav-center">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search Courses..." id="search">
+            </div>
+        </div>
+
+        <!-- 3. الأيقونات الثلاث على اليمين -->
+        <div class="nav-right">
+            <!-- أيقونة المستخدم -->
+            <a href="reg.html" class="icon-btn" aria-label="User Account">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <!-- أيقونة السلة -->
+            <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+
+            <!-- أيقونة القمر للمود -->
+            <button id="theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+</header>
     
     <!--start main-->
     <main>
         <!--start welcome-->
         <section id="welcome">
-            <h2 class="wel">Welcome to NovaLearn - Your Gateway to Web Development</h2>
-            <p class="p1">Master modern web development from HTML & CSS to advanced JavaScript & React. <br>
-            Build real-world projects and launch your tech career with hands-on learning.</p>
-        <video src="video/intro.mp4" loop controls autoplay muted></video>
+    <div class="hero-clean">
+        <!-- بادج شيك ومحفز -->
+        <div class="hero-badge">
+            <span class="badge-icon">✨</span>
+            <span>The Future of Online Learning</span>
+        </div>
+
+        <!-- عنوان رئيسي بتدرج ألوان جذاب -->
+        <h2 class="wel">
+            Master Web Development
+            <span class="gradient-text">Build the Future with Confidence</span>
+        </h2>
+
+        <!-- وصف واضح ومريح للعين -->
+        <p class="p1">
+            Learn HTML, CSS, JavaScript, and React through hands-on projects.
+            Join thousands of learners building real-world skills today.
+        </p>
+
+        <!-- الأزرار الرئيسية -->
+        <div class="cta-buttons">
+            <a href="courses.html" class="btn-primary">
+                Get Started Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="courses.html" class="btn-secondary">
+                <i class="fa-solid fa-play"></i> Explore Courses
+            </a>
+        </div>
+    </div>
+
+    <!-- الإحصائيات -->
+    <section class="stats-section" aria-label="Platform Statistics">
+        <article class="stat-card">
+            <h3>10k+</h3>
+            <p>Active Students</p>
+        </article>
+        <article class="stat-card">
+            <h3>50+</h3>
+            <p>Expert Courses</p>
+        </article>
+        <article class="stat-card">
+            <h3>4.9★</h3>
+            <p>Course Rating</p>
+        </article>
+    </section>
+            <!-- الفيديو جوه figure  -->
+            <figure class="video-container">
+                <video src="video/intro.mp4" autoplay controls muted>Your browser does not support the video tag.</video>
+            </figure>
         </section>
-        <hr>
+
         <!--start table of courses-->
         <section id="table">
             <h2 class="corname"> Our Featured Courses</h2>
-            <table border="1">
+            <table>
                 <thead>
                 <tr>
                     <th>Course Name</th>
@@ -71,6 +142,57 @@
                 </tbody>
             </table>
         </section>
+        <!--start faq teaser-->
+<section id="faq-teaser">
+    <div class="faq-teaser-box">
+        <div class="faq-teaser-text">
+            <h3>Got Questions?</h3>
+            <p>Find quick answers about access, certificates, and course levels.</p>
+        </div>
+        <a href="faq.html" class="btn-secondary">
+            View FAQ <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+<!--start instructors teaser-->
+<section id="inst-teaser">
+    <div class="inst-teaser-head">
+        <h3>Learn From <span class="gradient-text">Industry Experts</span></h3>
+        <a href="inst.html" class="btn-secondary">
+            View All Instructors <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+    <div class="inst-teaser-grid">
+        <a href="inst.html" class="inst-mini">
+            <img src="img/4.png" alt="Eng.Ahmed Hassan">
+            <h4>Eng. Ahmed Hassan</h4>
+            <p>Senior Front-End Developer</p>
+        </a>
+        <a href="inst.html" class="inst-mini">
+            <img src="img/5.png" alt="Eng.Omar Ali">
+            <h4>Eng. Omar Ali</h4>
+            <p>Full-Stack Web Developer</p>
+        </a>
+        <a href="inst.html" class="inst-mini">
+            <img src="img/6.png" alt="Eng.Sarah Omar">
+            <h4>Eng. Sarah Omar</h4>
+            <p>Lead UI/UX Designer & Web Engineer</p>
+        </a>
+    </div>
+</section>
+
+<!--start testimonials teaser-->
+<section id="test-teaser">
+    <div class="test-teaser-box">
+        <div class="test-teaser-text">
+            <h3>What Our Students Say</h3>
+            <p>"The HTML and CSS courses are extremely practical and well-structured" — Sarah Mahmoud</p>
+        </div>
+        <a href="test.html" class="btn-secondary">
+            Read Testimonials <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
     </main>
 
     <!--start footer-->
@@ -84,5 +206,8 @@
         <!--حقوق الملكية-->
         <p>&copy; 2026 NovaLearn. All Rights Reserved.</p>
     </footer>
+
+        <script src="main.js"></script>
+
 </body>
 </html>

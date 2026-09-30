@@ -3,54 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts (Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">    
+<!--library cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--style-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="faq.css">
     <title>FAQ</title>
 </head>
-<body>
+<body class="light faq-page">
     <!--start navBar-->
     <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="details.html">Course Details</a></li>
-            <li><a href="inst.html">Instructors</a></li>
-            <li><a href="test.html">Testimonials</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="price.html">Pricing</a></li>
-            <li><a href="out.html">Checkout</a></li>
-            <li><a href="conform.html">Confirmation</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="reg.html">Register</a></li>
-        </ul>
+    <nav class="navbar">
+        <!-- 1. اللوجو والروابط على اليسار -->
+        <div class="nav-left">
+            <h1 class="logo">Nova<span>Learn</span></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="inst.html">Instructors</a></li>
+                <li><a href="price.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- 2. مربع البحث في المنتصف -->
+        <div class="nav-center">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search Courses..." id="search">
+            </div>
+        </div>
+
+        <!-- 3. الأيقونات الثلاث على اليمين -->
+        <div class="nav-right">
+            <!-- أيقونة المستخدم -->
+            <a href="reg.html" class="icon-btn" aria-label="User Account">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <!-- أيقونة السلة -->
+            <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+
+            <!-- أيقونة القمر للمود -->
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
     </nav>
-    </header>
+</header>
 
     <main>
-        <h1 class="faq">Frequently Asked Questions</h1>
+        <h1 class="faq">Frequently Asked <span class="gradient-text">Questions</span></h1>
         <section class="detail">
         <!-- question 1-->
         <details>
-            <summary>How long do I have access to the courses?</summary>
+            <summary>How long do I have access to the courses?
+                <i class="fa-solid fa-chevron-down chev"></i>
+            </summary>
             <p>You have lifetime access to all purchased courses and future updates</p>
         </details>
         <!-- question 2-->
         <details>
-            <summary>Will I get a certificate after completing a course?</summary>
+            <summary>Will I get a certificate after completing a course?
+                <i class="fa-solid fa-chevron-down chev"></i>
+            </summary>
             <p>Yes, you will receive an official completion certificate for each course</p>
         </details>
 
         <!-- question 3-->
         <details>
-            <summary>Are the courses suitable for complete beginners?</summary>
+            <summary>Are the courses suitable for complete beginners?
+                <i class="fa-solid fa-chevron-down chev"></i>
+            </summary>
             <p>Absolutely! All courses start from the basics and cover concepts step by step</p>
         </details>
-        </section>
+        </section> 
+        
         <!--button-->
         <section class="button">
             <a href="index.html">Go to Home page</a>
         </section>
+
     </main>
 
     <!--start footer-->
@@ -64,5 +104,8 @@
         <!--حقوق الملكية-->
         <p>&copy; 2026 NovaLearn. All Rights Reserved.</p>
     </footer>
+
+
+    <script src="main.js"></script>
 </body>
 </html>

@@ -3,51 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts (Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">    
+<!--library cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--style-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
     <title>Contact Us</title>
 </head>
-<body>
+<body class="light contact-page">
     <!--start navBar-->
     <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="details.html">Course Details</a></li>
-            <li><a href="inst.html">Instructors</a></li>
-            <li><a href="test.html">Testimonials</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="price.html">Pricing</a></li>
-            <li><a href="out.html">Checkout</a></li>
-            <li><a href="conform.html">Confirmation</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="reg.html">Register</a></li>
-        </ul>
+    <nav class="navbar">
+        <!-- 1. اللوجو والروابط على اليسار -->
+        <div class="nav-left">
+            <h1 class="logo">Nova<span>Learn</span></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="inst.html">Instructors</a></li>
+                <li><a href="price.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- 2. مربع البحث في المنتصف -->
+        <div class="nav-center">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search Courses..." id="search">
+            </div>
+        </div>
+
+        <!-- 3. الأيقونات الثلاث على اليمين -->
+        <div class="nav-right">
+            <!-- أيقونة المستخدم -->
+            <a href="reg.html" class="icon-btn" aria-label="User Account">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <!-- أيقونة السلة -->
+            <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+
+            <!-- أيقونة القمر للمود -->
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
     </nav>
-    </header>
+</header>
 
     <!--start main-->
     <main>
         <section class="maininfo">
-        <h1 class="contacts">Contact Us</h1>
-        <h2 class="nov">Get in Touch with NovaLearn</h2>
-        <p class="dis">Have questions about our courses, registration process, or payment options? Feel free to reach out to us. Our team is here to help you start your learning journey smoothly.</p>
+            <div class="hero-badge">
+                <span class="badge-icon">💬</span>
+                <span>We'd Love to Hear From You</span>
+            </div>
+            <h1 class="contacts">Contact Us</h1>
+            <h2 class="nov">Get in Touch with <span class="gradient-text">NovaLearn</span></h2>
+            <p class="dis">Have questions about our courses, registration process, or payment options? Feel free to reach out to us. Our team is here to help you start your learning journey smoothly.</p>
         </section>
+
         <!--start contact-->
         <section id="contactus">
-            <p><strong>E-mail:</strong>novalearn905@gmail.com</p>
-            <p><strong>Phone:</strong>01016515759</p>
-            <p><strong>Working Hours:</strong> Sunday - Thursday (9:00 AM - 5:00 PM)</p>
+            <div class="info-card">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <p class="info-label">E-mail</p>
+                    <p class="info-value">novalearn905@gmail.com</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <p class="info-label">Phone</p>
+                    <p class="info-value">01016515759</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                    <p class="info-label">Working Hours</p>
+                    <p class="info-value">Sunday - Thursday (9:00 AM - 5:00 PM)</p>
+                </div>
+            </div>
+
             <div class="location">
-                <p><strong>Location Address</strong></p>
+                <p class="location-title"><i class="fa-solid fa-location-dot"></i> Location Address</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54651.502318032835!2d33.8046228!3d31.117544150000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14fdd350ea3dffa3%3A0x68343b437a6173d8!2z2KfZhNi52LHZiti02Iwg2YLYs9mFINir2KfZhNirINin2YTYudix2YrYtNiMINmF2K3Yp9mB2LjYqSDYtNmF2KfZhCDYs9mK2YbYp9ih!5e0!3m2!1sar!2seg!4v1787265094179!5m2!1sar!2seg" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-            </div>    
+            </div>
         </section>
+
         <!--start table-->
-        <section>
+        <section class="hours-section">
             <h3>Working Hours</h3>
-            <table border="1">
+            <table class="hours-table">
                 <thead>
                 <tr>
                     <th>Days</th>
@@ -56,30 +113,33 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Sunday - Thursday</td>
-                        <td>9:00 AM - 5:00 PM</td>
+                        <td data-label="Days">Sunday - Thursday</td>
+                        <td data-label="Hours">9:00 AM - 5:00 PM</td>
                     </tr>
                     <tr>
-                        <td>Friday - Saturday</td>
-                        <td>Closed</td>
+                        <td data-label="Days">Friday - Saturday</td>
+                        <td data-label="Hours">Closed</td>
                     </tr>
                 </tbody>
             </table>
         </section>
+
         <!--start form contact-->
         <form action="index.html" method="post">
             <fieldset>
-                <legend>contact Us</legend>
-                <!--start name-->
-                <section id="name">
-                    <label for="nova">Name</label>
-                    <input type="text" name="nova" id="nova" placeholder="Enter your name" required>
-                </section>
-                <!--start email-->
-                <section id="remail">
-                    <label for="ema">E-mail</label>
-                    <input type="email" name="email" id="ema" placeholder="E-mail" required>
-                </section>
+                <legend>Contact Us</legend>
+                <div class="grid-2">
+                    <!--start name-->
+                    <section id="name">
+                        <label for="nova">Name</label>
+                        <input type="text" name="nova" id="nova" placeholder="Enter your name" required>
+                    </section>
+                    <!--start email-->
+                    <section id="remail">
+                        <label for="ema">E-mail</label>
+                        <input type="email" name="email" id="ema" placeholder="E-mail" required>
+                    </section>
+                </div>
                 <!--message-->
                 <section id="massg">
                     <label for="mess">Message</label>
@@ -107,5 +167,8 @@
         <!--حقوق الملكية-->
         <p>&copy; 2026 NovaLearn. All Rights Reserved.</p>
     </footer>
+
+        <script src="main.js"></script>
+
 </body>
 </html>

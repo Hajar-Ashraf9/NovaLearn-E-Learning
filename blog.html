@@ -3,54 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts (Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">    
+<!--library cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--style-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
     <title>Blog</title>
 </head>
-<body>
+<body class="light blog-page">
     <!--start navBar-->
     <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="details.html">Course Details</a></li>
-            <li><a href="inst.html">Instructors</a></li>
-            <li><a href="test.html">Testimonials</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="price.html">Pricing</a></li>
-            <li><a href="out.html">Checkout</a></li>
-            <li><a href="conform.html">Confirmation</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="reg.html">Register</a></li>
-        </ul>
+    <nav class="navbar">
+        <!-- 1. اللوجو والروابط على اليسار -->
+        <div class="nav-left">
+            <h1 class="logo">Nova<span>Learn</span></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="inst.html">Instructors</a></li>
+                <li><a href="price.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- 2. مربع البحث في المنتصف -->
+        <div class="nav-center">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search Courses..." id="search">
+            </div>
+        </div>
+
+        <!-- 3. الأيقونات الثلاث على اليمين -->
+        <div class="nav-right">
+            <!-- أيقونة المستخدم -->
+            <a href="reg.html" class="icon-btn" aria-label="User Account">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <!-- أيقونة السلة -->
+            <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+
+            <!-- أيقونة القمر للمود -->
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
     </nav>
-    </header>
+</header>
 
     <main>
-        <h1 class="blogac">Academy Blog</h1>
+        <h1 class="blogac">Academy <span class="gradient-text">Blog</span></h1>
         <section id="blog">
             <!--article 1-->
             <article class="art">
+                <span class="tag">Front-End</span>
                 <h2 class="qs">How to Start Learning Front-End Web Development in 2026?</h2>
-                <p class="sm"><small>Published on: January 10, 2026 | By: NovaLearn Academy</small></p>
-                <p class="disc">Starting your journey in web development begins with mastering the fundamentals: HTML for structure, CSS for styling,<br>
+                <p class="sm"><i class="fa-regular fa-calendar"></i> January 10, 2026 &nbsp;·&nbsp; NovaLearn Academy</p>
+                <p class="disc">Starting your journey in web development begins with mastering the fundamentals: HTML for structure, CSS for styling,
                     and JavaScript for interactivity. Focus on building small projects regularly to strengthen your coding skills.</p>
             </article>
-            <hr>
             <!--article 2-->
             <article class="art">
+                <span class="tag">SEO</span>
                 <h2 class="qs">Why Semantic HTML5 Matters for SEO?</h2>
-                <p class="sm"><small>Published on: February 01, 2026 | By: NovaLearn Academy</small></p>
-                <p class="disc">Using semantic tags like main, section, article, and nav helps search engines understand your website structure better.<br>
+                <p class="sm"><i class="fa-regular fa-calendar"></i> February 01, 2026 &nbsp;·&nbsp; NovaLearn Academy</p>
+                <p class="disc">Using semantic tags like main, section, article, and nav helps search engines understand your website structure better.
                     It also makes your pages much more accessible to users with special needs.</p>
             </article>
-            <hr>
             <!--article 3-->
             <article class="art">
+                <span class="tag">CSS</span>
                 <h2 class="qs">Top CSS Flexbox & Grid Tips for Beginners</h2>
-                <p class="sm"><small>Published on: February 15, 2026 | By: NovaLearn Academy</small></p>
-                <p class="disc">Building responsive web design is much easier using modern CSS. Learn how Flexbox handles one-dimensional page components<br>
+                <p class="sm"><i class="fa-regular fa-calendar"></i> February 15, 2026 &nbsp;·&nbsp; NovaLearn Academy</p>
+                <p class="disc">Building responsive web design is much easier using modern CSS. Learn how Flexbox handles one-dimensional page components
                     while Grid excels at overall two-dimensional layout design.</p>
             </article>
         </section>
@@ -71,5 +104,8 @@
         <!--حقوق الملكية-->
         <p>&copy; 2026 NovaLearn. All Rights Reserved.</p>
     </footer>
+
+        <script src="main.js"></script>
+
 </body>
 </html>

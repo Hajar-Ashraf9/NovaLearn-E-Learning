@@ -3,47 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts (Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">    
+<!--library cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--style-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="price.css">
     <title>Pricing</title>
 </head>
-<body>
+<body class="light price-page">
     <!--start navBar-->
     <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="details.html">Course Details</a></li>
-            <li><a href="inst.html">Instructors</a></li>
-            <li><a href="test.html">Testimonials</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="price.html">Pricing</a></li>
-            <li><a href="out.html">Checkout</a></li>
-            <li><a href="conform.html">Confirmation</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="reg.html">Register</a></li>
-        </ul>
+    <nav class="navbar">
+        <!-- 1. اللوجو والروابط على اليسار -->
+        <div class="nav-left">
+            <h1 class="logo">Nova<span>Learn</span></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="inst.html">Instructors</a></li>
+                <li><a href="price.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- 2. مربع البحث في المنتصف -->
+        <div class="nav-center">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search Courses..." id="search">
+            </div>
+        </div>
+
+        <!-- 3. الأيقونات الثلاث على اليمين -->
+        <div class="nav-right">
+            <!-- أيقونة المستخدم -->
+            <a href="reg.html" class="icon-btn" aria-label="User Account">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <!-- أيقونة السلة -->
+            <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+
+            <!-- أيقونة القمر للمود -->
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
     </nav>
-    </header>
+</header>
 
     <!--start main-->
     <main>
         <section id="infoprice">
-        <h1 class="headprice">Choose Your Learning Plan</h1>
-        <p class="disprice">Select the best plan that fits your learning pace and ambition. Upgrade or change your plan at any time</p>
+            <div class="hero-badge">
+                <span class="badge-icon">💳</span>
+                <span>Simple, Transparent Pricing</span>
+            </div>
+            <h1 class="headprice">Choose Your <span class="gradient-text">Learning Plan</span></h1>
+            <p class="disprice">Select the best plan that fits your learning pace and ambition. Upgrade or change your plan at any time</p>
         </section>
         <!--Pricing Table Comparison-->
         <section id="price">
             <h3>Pricing Table Comparison</h3>
             <!--start table-->
-            <table border="1">
+            <div class="price-table-wrap">
+            <table>
                 <!--head of table-->
                 <thead>
                     <tr>
                         <th>Feature</th>
                         <th>Basic Plan</th>
-                        <th>Pro Plan</th>
+                        <th class="popular-col">Pro Plan <span class="popular-badge">Most Popular</span></th>
                         <th>Ultimate Plan</th>
                     </tr>
                 </thead>
@@ -52,41 +89,42 @@
                     <tr>
                         <td>Price</td>
                         <td>$29 / month</td>
-                        <td>$59 / month</td>
+                        <td class="popular-col">$59 / month</td>
                         <td>$99 / month</td>
                     </tr>
                     <tr>
                         <td>Course Access</td>
                         <td>Access to 2 Courses</td>
-                        <td>Access to All Courses</td>
+                        <td class="popular-col">Access to All Courses</td>
                         <td>Full Access + Mentorship</td>
                     </tr>
                     <tr>
                         <td>Projects</td>
                         <td>Basic Projects</td>
-                        <td>Real-world Projects</td>
+                        <td class="popular-col">Real-world Projects</td>
                         <td>Portfolio & Career Guidance</td>
                     </tr>
                     <tr>
                         <td>Certificate</td>
                         <td>Digital Certificate</td>
-                        <td>Verified Certificate</td>
+                        <td class="popular-col">Verified Certificate</td>
                         <td>Verified Certificate + Job Assistance</td>
                     </tr>
                     <tr>
                         <td>Support</td>
                         <td>Community Forum</td>
-                        <td>Priority Support</td>
+                        <td class="popular-col">Priority Support</td>
                         <td>1-on-1 Mentorship</td>
                     </tr>
                     <tr>
                         <td>Subscribe</td>
-                        <td><a href="cart.html">Get Started</a></td>
-                        <td><a href="cart.html">Get Started</a></td>
-                        <td><a href="cart.html">Get Started</a></td>
+                        <td><a href="cart.html?plan=basic" class="btn-secondary">Get Started</a></td>
+                        <td class="popular-col"><a href="cart.html?plan=pro" class="btn-primary">Get Started</a></td>
+                        <td><a href="cart.html?plan=ultimate" class="btn-secondary">Get Started</a></td>
                     </tr>
                 </tbody>
             </table>
+            </div>
         </section>
     </main>
     <!--start footer-->
@@ -100,5 +138,6 @@
         <!--حقوق الملكية-->
         <p>&copy; 2026 NovaLearn. All Rights Reserved.</p>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>
