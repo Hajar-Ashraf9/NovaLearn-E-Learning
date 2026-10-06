@@ -189,3 +189,12 @@ if(payForm){
 
     })
 }
+//register
+let regForm= document.getElementById('reg')
+if(regForm){
+    regForm.addEventListener('submit',function(e){
+        e.preventDefault();
+        alert("Registration successful!");
+
+    })
+}
