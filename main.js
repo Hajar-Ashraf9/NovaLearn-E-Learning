@@ -27,7 +27,7 @@ else if(saveThem==="light"){
 
 let seaRch = document.querySelector("#search")
 let taBle = document.querySelectorAll("tbody tr,.stat-card, .faq-teaser-box, .inst-mini, .test-teaser-box, details, .info-card, .art, .price-table-wrap")
-
+if (seaRch) {
 seaRch.addEventListener("input",function () {
     let modeFliter = seaRch.value.toLowerCase();
     taBle.forEach(element => {
@@ -41,6 +41,7 @@ seaRch.addEventListener("input",function () {
     });
 
 })
+}
 
 //daynamic courses
 let courses = {
