@@ -165,9 +165,9 @@ if ( checkoutBtn && cartPlan){
 }
 }
 //Confirmation
+let confirmData= new URLSearchParams(window.location.search)
+let confirmPlan =confirmData.get('plan')
 if(document.getElementById('planNam')){
-    let confirmData= new URLSearchParams(window.location.search)
-    let confirmPlan =confirmData.get('plan')
     let confirmGet = plans[confirmPlan];
     if(confirmData){
         document.getElementById('planNam').textContent=confirmGet.name
@@ -177,4 +177,15 @@ if(document.getElementById('planNam')){
     //Order ID
     let randoumId= Math.floor(1000 + Math.random() * 9999)
     document.getElementById("order").textContent= "#ORD-2026-"+ randoumId
+}
+//check out
+let payForm= document.getElementById('payform')
+if(payForm){
+    payForm.addEventListener('submit',function(e){
+        e.preventDefault();
+        let currentData= new URLSearchParams(window.location.search)
+        let currentPlan = currentData.get('plan')
+        window.location.href = "conform.html?plan=" + currentPlan;
+
+    })
 }
