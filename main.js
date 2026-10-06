@@ -185,7 +185,7 @@ if(payForm){
         e.preventDefault();
         let currentData= new URLSearchParams(window.location.search)
         let currentPlan = currentData.get('plan')
-        window.location.href = "conform.html?plan=" + currentPlan;
+        window.location.href = "confirm.html?plan=" + currentPlan;
 
     })
 }
